@@ -24,7 +24,7 @@ class PostController extends Controller
     }
     public function show($id){
         $post = Post::findOrFail($id);
-          return dd($post);
+          return Inertia::render('Post/View',['posts'=>$post]);
     }
 
 }
