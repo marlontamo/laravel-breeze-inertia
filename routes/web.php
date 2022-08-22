@@ -15,8 +15,8 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('posts', [PostController::class,'index'])->name('posts.index');
-Route::get('post/{id}',[PostController::class,'show'])->name('view');
+Route::get('/posts', [PostController::class,'index'])->name('posts.index');
+Route::get('/post/{id}',[PostController::class,'show'])->name('view');
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),

@@ -1,5 +1,5 @@
 <template>
-    <Head title="Dashboard" />
+    <Head title="Single Post" />
 
     <BreezeAuthenticatedLayout>
         <template #header>
@@ -8,10 +8,11 @@
             </h2>
         </template>
 
-        <div class="py-12">
+        <div class="">
             <div class="container mx-auto sm:px-6 lg:px-8">
                 <div
                     class="
+                        w-full
                         overflow-hidden
                         bg-white
                         shadow-sm
@@ -19,9 +20,14 @@
                         sm:rounded-lg
                     "
                 >
+                <span class="circle">{{posts.id}}</span>
+                <h1 class="w-56 bg-white shadow rounded px-1 py-1">Title: {{posts.title}}</h1>
+                <strong class="w-56 bg-white shadow rounded px-1 py-1">Description: {{posts.description}}</strong>
+                <code class="w-56 bg-white shadow rounded px-1 py-1">created_at {{posts.created_at}}</code>
+                <code class="w-56 bg-white shadow rounded px-1 py-1">updated_at {{posts.updated_at}}</code>
+                
                     <div class="p-6 bg-white border-b border-gray-200">
-                        <h1></h1>
-                        <pagination class="mt-6" :links="posts.links" />
+                       
                     </div>
                 </div>
             </div>
@@ -49,5 +55,14 @@ export default {
    
 };
 </script>
+<style scoped>
+.circle{
+    border:1px solid #000;
+    border-radius:25px;
+    display: inline-block;
+    padding:5px;
+}
+
+</style>
 
 

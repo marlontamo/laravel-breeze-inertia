@@ -18,13 +18,16 @@ class PostController extends Controller
         $posts = Post::latest()->paginate(10);
 
         return Inertia::render(
-            'Post/Index',
+            'Post/List',
             ['posts' => $posts]
         );
     }
     public function show($id){
         $post = Post::findOrFail($id);
-          return Inertia::render('Post/View',['posts'=>$post]);
+          return Inertia::render(
+             'Post/Show',
+            ['posts'=>$post]
+                        );
     }
 
 }
