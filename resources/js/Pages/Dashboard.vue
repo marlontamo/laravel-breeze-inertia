@@ -4,6 +4,7 @@ import { Head } from '@inertiajs/inertia-vue3';
 import Image from '@/Components/Image.vue';
 
 
+
 </script>
 
 <template>

@@ -39,10 +39,14 @@
                                     <td class="px-4 py-2">
                                         <img
                                             :src="showImage() + image.image"
-                                            class="object-cover h-40 w-80"
+                                            class="object-cover h-20 w-20"
                                         />
                                     </td>
-                                    <td class="px-4 py-2">Action</td>
+                                    <td class="px-4 py-2">
+                                          <a :href="showImage() + image.image" target="_blank">view</a>
+                                          <Link >Edit</Link>
+                                          <Link >Delete</Link>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -69,6 +73,9 @@ export default {
         showImage() {
             return "/storage/";
         },
+        ImageShow(){
+            return "storage/"+this.images.image;
+        }
     },
 
     props: {
