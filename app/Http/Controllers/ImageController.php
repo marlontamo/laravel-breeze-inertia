@@ -40,5 +40,10 @@ class ImageController extends Controller
 
         return Redirect::route('image.index');
     }
+    public function show($id){
+        $image = Image::where('id',$id)->first();
+        return Inertia::render('Image/ViewImage',['image'=>$image]);
+
+    }
 
 }

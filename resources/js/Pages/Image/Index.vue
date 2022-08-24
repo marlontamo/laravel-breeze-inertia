@@ -43,9 +43,9 @@
                                         />
                                     </td>
                                     <td class="px-4 py-2">
-                                          <a :href="showImage() + image.image" target="_blank">view</a>
-                                          <Link >Edit</Link>
-                                          <Link >Delete</Link>
+                                          <Link :href="ImageShow() + image.id">view</Link>
+                                          <!-- <Link >Edit</Link>
+                                          <Link >Delete</Link> -->
                                     </td>
                                 </tr>
                             </tbody>
@@ -74,7 +74,7 @@ export default {
             return "/storage/";
         },
         ImageShow(){
-            return "storage/"+this.images.image;
+            return "/image/view/";
         }
     },
 

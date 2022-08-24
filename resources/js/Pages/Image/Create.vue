@@ -4,8 +4,8 @@
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                Image Create
-            </h2>
+               Upload Image 
+               </h2>
         </template>
 
         <div class="py-12">

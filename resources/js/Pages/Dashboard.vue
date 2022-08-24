@@ -2,6 +2,8 @@
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
 import { Head } from '@inertiajs/inertia-vue3';
 import Image from '@/Components/Image.vue';
+import Dash from '@/Components/Dash.vue';
+
 
 
 
@@ -22,7 +24,10 @@ import Image from '@/Components/Image.vue';
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
                         You're logged in {{$page.props.auth.user.name}}
+                       <Dash class="mt-4">
                         <Image />
+                       </Dash>
+                       
                     </div>
                 </div>
             </div>
