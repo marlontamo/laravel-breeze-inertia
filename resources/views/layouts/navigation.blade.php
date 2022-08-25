@@ -15,9 +15,15 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('post.index')">
+                        {{ __('Post') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('image.create')">
+                        {{ __('CreateImage') }}
+                    </x-nav-link>
                 </div>
             </div>
-
+            
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">

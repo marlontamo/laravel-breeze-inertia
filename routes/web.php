@@ -19,6 +19,9 @@ use App\Http\Controllers\ImageController;
 Route::get('/home',function(){
    return Inertia::render('Home');
 });
+Route::get ('/xhome',function(){
+    return view('Pages/Home');
+});
 Route::get('/posts', [PostController::class,'index'])->name('posts.index');
 Route::get('/post/{id}',[PostController::class,'show'])->name('view');
 Route::get('/', function () {
